@@ -35,6 +35,10 @@
 App::uses('ControllerPrefixRoute', 'ControllerPrefix.Routing/Route');
 Router::connect('/admin/:controller/:action/*',
                 array('controllerPrefix' => 'admin'), array('routeClass' => 'ControllerPrefixRoute'));
+
+Router::connect('/custom/:controller/:action/*',
+                array('controllerPrefix' => 'custom'), array('routeClass' => 'ControllerPrefixRoute'));
+
 /**
  * Load all plugin routes.  See the CakePlugin documentation on
  * how to customize the loading of plugin routes.
